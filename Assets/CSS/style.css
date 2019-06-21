@@ -16,9 +16,26 @@ form{
     width: 100%;
 }
 body {
-    background-image: url("../images/background2.jpg")
+    /* background-image: url("../images/background2.jpg") */
 }
 .jumbotron {
     background-color: grey;
     color: white;
+}
+.table-title {
+    border-radius:5px;
+    width: 98%;
+    margin-left: 12px;
+    padding-left: 5px;
+    
+   
+}
+.submit {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.input-form {
+    padding-left: 5px;
+    padding-right:5px;
+    padding-top:2px;
 }
