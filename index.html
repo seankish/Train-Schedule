@@ -9,13 +9,10 @@
         <link rel="stylesheet" type="text/css" href="assets/CSS/reset.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      
         <script src="https://momentjs.com/downloads/moment.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-       
     </head>
     <body>
             <div class="container-fluid text-center">
@@ -23,12 +20,13 @@
                       <h1>Train Schedule CHOOO CHOOO</h1> 
                     </div>
             </div>
+            <h2 class='current-time text-center'></h2>
     <div class = "container train-table">
         <div class="row">
             <div class= "table-title bg-primary">Current Train Schedule</div>
         </div>
-        <table class="table">
-                <thead>
+        <table class="schedule table text-left">
+                <thead id="train-schedule">
                   <tr>
                       <th scope="col">Train Name</th>
                     <th scope="col">Destination</th>
@@ -37,13 +35,13 @@
                     <th scope="col">Minutes Away</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="table-body">
                   <tr class="train-info">
-                    <th id="train-name-display" scope="row"></th>
-                    <td id="destination-display"></td>
-                    <td id="frequency-display"></td>
-                    <td id="next-arrival-display"></td>
-                    <td id="minutes-away-display"></td>
+                    <th id="train-name-display" scope="row"> Thomas</th>
+                    <td id="destination-display">New York</td>
+                    <td id="frequency-display"> 40</td>
+                    <td id="next-arrival-display">12:40</td>
+                    <td id="minutes-away-display">5</td>
                   </tr>
                   <!-- <tr>
                     <th scope="row">2</th>
@@ -74,7 +72,11 @@
                 <div class="form-group">
                         <label for="first-train-time"> First Train Time</label>
                         <input type="train-time" class="form-control m-1" id="first-train-input" placeholder="First Train Time (HH:mm-millitary time)">
-                      </div>
+                </div>
+                <div class="form-group">
+                  <label for="frequencyOfTrain"> Frequency(min)</label>
+                  <input type="frequency" class="form-control m-1" id="frequency-input" placeholder="How long between trains">
+                </div>
                
                 <button type="submit" class="btn btn-primary submit pl-2">Submit</button>
               </form>
